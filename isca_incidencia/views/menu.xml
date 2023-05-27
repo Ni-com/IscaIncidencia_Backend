@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <!-- Top menu item -->
+
+        <menuitem name="IscaIncidencia" id="isca_incidencia.menu_root" />
+
+        <!-- menu Items -->
+        <menuitem name="Categorias" id="isca_incidencia.menu_categoria" parent="isca_incidencia.menu_root" />
+        <menuitem name="Rol" id="isca_incidencia.menu_rol" parent="isca_incidencia.menu_root" />
+        <menuitem name="Inventario" id="isca_incidencia.menu_inventario" parent="isca_incidencia.menu_root" />
+        <menuitem name="Usuarios" id="isca_incidencia.menu_usuario" parent="isca_incidencia.menu_root" />
+        <menuitem name="Ubicaciones" id="isca_incidencia.menu_ubicacion" parent="isca_incidencia.menu_root" />
+        <menuitem name="Incidencias" id="isca_incidencia.menu_incidencia" parent="isca_incidencia.menu_root" />
+        <menuitem name="Registros" id="isca_incidencia.menu_registro" parent="isca_incidencia.menu_root" />
+        <menuitem name="Facturas" id="isca_incidencia.menu_factura" parent="isca_incidencia.menu_root" />
+        <menuitem name="Album" id="isca_incidencia.menu_album" parent="isca_incidencia.menu_root" />
+        <!-- actions of menu  -->
+        <menuitem name="Categoria" id="isca_incidencia.menu_categoria_list" parent="isca_incidencia.menu_categoria"
+            action="isca_incidencia.action_window_categoria" />
+        <menuitem name="Rol" id="isca_incidencia.menu_rol_list" parent="isca_incidencia.menu_rol"
+            action="isca_incidencia.action_window_rol" />    
+        <menuitem name="Inventario" id="isca_incidencia.menu_inventario_list" parent="isca_incidencia.menu_inventario"
+            action="isca_incidencia.action_window_inventario" />    
+        <menuitem name="Usuarios" id="isca_incidencia.menu_usuario_list" parent="isca_incidencia.menu_usuario"
+            action="isca_incidencia.action_window_usuario" />    
+        <menuitem name="Ubicaciones" id="isca_incidencia.menu_ubicacion_list" parent="isca_incidencia.menu_ubicacion"
+            action="isca_incidencia.action_window_ubicacion" />
+        <menuitem name="Incidencias" id="isca_incidencia.menu_incidencia_list" parent="isca_incidencia.menu_incidencia"
+            action="isca_incidencia.action_window_incidencia" />
+        <menuitem name="Registros" id="isca_incidencia.menu_registro_list" parent="isca_incidencia.menu_registro"
+            action="isca_incidencia.action_window_registro" />
+        <menuitem name="Facturas" id="isca_incidencia.menu_factura_list" parent="isca_incidencia.menu_factura"
+            action="isca_incidencia.action_window_factura" />
+        <menuitem name="Album" id="isca_incidencia.menu_album_list" parent="isca_incidencia.menu_album"
+            action="isca_incidencia.action_window_album" />
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+      <record model="ir.ui.view" id="isca_incidencia.inventario_model_form">
+        <field name="name">inventario Form</field>
+        <field name="model">isca_incidencia.inventario_model</field>
+        <field name="arch" type="xml">
+          <form string="inventario">
+            <header>
+            </header>
+            <sheet>
+              <group name="top">
+                <group name="left">
+                <field name="icono" widget="image"/>
+                  <field name="name"/>
+                  <field name="descripcion"/>
+                  <field name="cantidad"/>
+                  <field name="fechaCreacion"/>
+                  <field name="incidencias"/>
+                  <field name="conIncidencia"/>
+                  <field name="facturas"/>
+                  <field name="activo"/>
+                </group>
+                <group name="right">
+                  <field name="etiquetable"/>
+                  <field name="etiqueta"/>
+                  <field name="categoria"/>
+                  <field name="usuario"/>
+                  <field name="ubicacion"/>
+                  <field name="masImagenes"/>
+                </group>  
+            </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+     <record model="ir.ui.view" id="isca_incidencia.inventario_model_list">
+      <field name="name">inventario List</field>
+      <field name="model">isca_incidencia.inventario_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="cantidad"/>
+          <field name="fechaCreacion"/>
+        </tree>
+      </field>
+    </record>
+
+  
+      <record model="ir.actions.act_window" id="isca_incidencia.action_window_inventario">
+        <field name="name"> inventario Window</field>
+        <field name="res_model">isca_incidencia.inventario_model</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+  
+  
+     
+  
+    </data>
+</odoo>

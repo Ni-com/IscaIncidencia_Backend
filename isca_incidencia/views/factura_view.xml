@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+
+
+
+      <record model="ir.ui.view" id="isca_incidencia.factura_model_form">
+        <field name="name">factura Form</field>
+        <field name="model">isca_incidencia.factura_model</field>
+        <field name="arch" type="xml">
+          <!-- etiqueta form es la base -->
+          <form string="factura">
+            <!-- Botones  name=referencia a  a el modelo -->
+            <header>
+             <!-- <button name="changeState" type="object" string="Change State" class="oe_highlight" confirm="Are you sure to change state of this task"/> -->
+              <!-- <button name="cleanFinished" type="object" string="Clean finished tasks" confirm="Are you sure to delete all finished tasks"/> -->
+            </header>
+            <!-- Mostrar el modelo como una hoja add etiqueta sheet -->
+            <sheet>
+              <!-- Organizacion de los botones  el group name=saber_el_orden-->
+              <group name="top">
+                <group name="left">
+                  <!-- Para que se vean los campos hay que ponerlos entre la etiqueta group-->
+                  
+                  <field name="name"/>
+                  
+                </group>
+                <group name="right">
+                  <field name="fechaCreacion"/>
+                  <field name="inventario"/>
+                  
+                 
+                  <!-- <field name="active" readonly="True" force_save="True"/>-->
+                                  <!-- attrs="{'readonly' : True}"    para hacerlo readonly-->
+                </group>  
+            </group>
+            </sheet>
+          </form>
+        </field>
+      </record>
+
+
+      <!-- Pagina de lista // sheet -->
+     <record model="ir.ui.view" id="isca_incidencia.factura_model_list">
+      <field name="name">factura List</field>
+      <field name="model">isca_incidencia.factura_model</field>
+      <field name="arch" type="xml">
+        <!-- Orden de la lista y la decoracion se relaciona con: is_done del MODELO-->
+        <tree>
+          <!-- Columnas que apareceran en la lista, tienen que tener el mismo nombre en el MODELO  -->
+          <field name="fechaCreacion"/>
+          <field name="inventario"/>
+        </tree>
+      </field>
+    </record>
+      
+        
+  
+
+
+      <!-- Acciones del menu // Binding/Enlazar con el modelo-->
+  
+      <record model="ir.actions.act_window" id="isca_incidencia.action_window_factura">
+        <field name="name"> factura Window</field>
+        <field name="res_model">isca_incidencia.factura_model</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+  
+  
+     
+  
+    </data>
+</odoo>
